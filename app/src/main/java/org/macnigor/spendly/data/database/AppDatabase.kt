@@ -22,8 +22,8 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "expense_tracker_db"
-                ).fallbackToDestructiveMigration().build()
+                    "spendly_db"
+                ).build()   // .fallbackToDestructiveMigration().build() удаляет базу если ошибка разметки
                 INSTANCE = instance
                 instance
             }
