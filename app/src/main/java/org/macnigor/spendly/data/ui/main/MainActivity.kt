@@ -1,18 +1,14 @@
 package org.macnigor.spendly.data.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.lifecycleScope
 import com.google.android.material.button.MaterialButton
-import kotlinx.coroutines.launch
 import org.macnigor.spendly.R
 import org.macnigor.spendly.data.database.db.AppDatabase
-import org.macnigor.spendly.data.database.dao.IncomeDao
-import org.macnigor.spendly.data.database.dao.PurchaseDao
 import org.macnigor.spendly.data.ui.common.AddIncomeBottomSheet
+import org.macnigor.spendly.data.ui.common.AddPurchaseBottomSheet
 import org.macnigor.spendly.data.ui.common.Utilities
 import org.macnigor.spendly.data.viewmodel.MainViewModelFactory
 import java.util.*
@@ -67,10 +63,38 @@ class MainActivity : AppCompatActivity() {
             bottomSheet.show(supportFragmentManager, "AddIncomeBottomSheet")
         }
 
+        // Кнопки расходов
+        val categories = mapOf(
+            "Продукты" to R.id.foodButton,
+            "Транспорт" to R.id.transportButton,
+            "Аптека" to R.id.pharmacyButton,
+            "Одежда" to R.id.clothesButton,
+            "Хобби" to R.id.entertainmentButton,
+            "ЖКХ" to R.id.rentButton,
+            "Другое" to R.id.otherButton
+        )
+
+        categories.forEach{(categoryName,id)->
+            findViewById<MaterialButton>(id).setOnClickListener {
+                val bottomSheet = AddPurchaseBottomSheet.newInstance(categoryName) {
+                    viewModel.updateBalance()
+                }
+                bottomSheet.show(supportFragmentManager, "AddPurchaseBottomSheet")
+            }
+            }
         viewModel.updateBalance()
-    }
+        }
+
+
+
+
+
+
+
+
 
     override fun onResume() {
+
         super.onResume()
         viewModel.updateBalance()
     }

@@ -15,4 +15,6 @@ class Utilities(
         return incomeVal - purchaseVal
     }
 
+
+
 }
