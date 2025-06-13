@@ -6,11 +6,14 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.button.MaterialButton
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import org.macnigor.spendly.R
 import org.macnigor.spendly.data.database.AppDatabase
 import org.macnigor.spendly.data.database.IncomeDao
 import org.macnigor.spendly.data.database.PurchaseDao
+import org.macnigor.spendly.data.model.Purchase
 import org.macnigor.spendly.data.utils.AddIncomeBottomSheet
 import org.macnigor.spendly.data.utils.Utilities
 import java.util.*
@@ -45,12 +48,28 @@ class MainActivity : AppCompatActivity() {
         )
 
 
-        categoryMap.forEach { (id, category) ->
-            findViewById<MaterialButton>(id).setOnClickListener {
-                onCategorySelected(category)
+        lifecycleScope.launch {
+            categoryMap.forEach { (id, category) ->
+                val total = withContext(Dispatchers.IO) {
+                    purchaseDao.getPurchasesByCategory(category).sumOf { it.amount }
+                }
+
+                val textViewId = when (id) {
+                    R.id.foodButton -> R.id.foodAmount
+                    R.id.transportButton -> R.id.transportAmount
+                    R.id.pharmacyButton -> R.id.pharmacyAmount
+                    R.id.clothesButton -> R.id.clothesAmount
+                    R.id.entertainmentButton -> R.id.entertainmentAmount
+                    R.id.rentButton -> R.id.rentAmount
+                    R.id.otherButton -> R.id.otherAmount
+                    else -> null
+                }
+
+                textViewId?.let {
+                    findViewById<TextView>(it).text = "%.0f ₽".format(total)
+                }
             }
-
-
+        }
 
 
 
@@ -58,7 +77,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-}
+
 
 
     private fun updateBalance() {
