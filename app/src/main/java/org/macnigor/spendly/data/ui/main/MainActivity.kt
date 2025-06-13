@@ -54,12 +54,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
         updateBalance()
     }
 
 
 }
+
 
     private fun updateBalance() {
         lifecycleScope.launch {

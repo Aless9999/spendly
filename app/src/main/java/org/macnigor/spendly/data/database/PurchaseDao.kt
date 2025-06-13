@@ -20,4 +20,8 @@ interface PurchaseDao {
     @Query("SELECT category, SUM(amount) as total FROM purchases GROUP BY category")
     fun getCategoryTotals(): LiveData<List<CategoryTotal>>
 
+    @Query("SELECT * FROM purchases WHERE category = :category")
+    fun getPurchasesByCategory(category: String): List<Purchase>
+
+
 }
