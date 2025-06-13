@@ -12,6 +12,7 @@ class IncomeActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.income_activity)
 
+
     }
 
 }

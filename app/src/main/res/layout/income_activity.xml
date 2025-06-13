@@ -22,7 +22,44 @@
             android:text="Баланс: 12 500 ₽"
             android:textSize="24sp"
             android:gravity="center"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
     </com.google.android.material.card.MaterialCardView>
+
+    <EditText
+        android:id="@+id/incomeAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Введите сумму"
+        android:inputType="number"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/balanceCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <EditText
+        android:id="@+id/incomeDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Описание"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/incomeAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
+
+    <Button
+        android:id="@+id/saveIncomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        app:layout_constraintTop_toBottomOf="@id/incomeDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

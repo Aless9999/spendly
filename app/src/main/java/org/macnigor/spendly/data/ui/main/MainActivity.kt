@@ -12,12 +12,12 @@ import org.macnigor.spendly.data.database.AppDatabase
 import org.macnigor.spendly.data.database.IncomeDao
 import org.macnigor.spendly.data.database.PurchaseDao
 import org.macnigor.spendly.data.ui.income.IncomeActivity
+import org.macnigor.spendly.data.utils.AddIncomeBottomSheet
 import org.macnigor.spendly.data.utils.Utilities
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var balanceText: TextView
-    private lateinit var incomeButton: TextView
     private lateinit var purchaseDao: PurchaseDao
     private lateinit var incomeDao: IncomeDao
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,10 +28,12 @@ class MainActivity : AppCompatActivity() {
         purchaseDao = AppDatabase.getDatabase(this).purchaseDao()
         incomeDao = AppDatabase.getDatabase(this).incomeDao()
 
-        findViewById<MaterialButton>(R.id.incomeButton).setOnClickListener{
-            val itent = Intent(this, IncomeActivity::class.java)
-            startActivity(itent)
+        findViewById<MaterialButton>(R.id.incomeButton).setOnClickListener {
+            val bottomSheet = AddIncomeBottomSheet { updateBalance() } // передаём коллбек
+            bottomSheet.show(supportFragmentManager, "AddIncomeBottomSheet")
         }
+
+
 
 
 
