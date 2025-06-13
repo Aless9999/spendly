@@ -1,6 +1,5 @@
 package org.macnigor.spendly.data.ui.main
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
@@ -11,7 +10,6 @@ import org.macnigor.spendly.R
 import org.macnigor.spendly.data.database.AppDatabase
 import org.macnigor.spendly.data.database.IncomeDao
 import org.macnigor.spendly.data.database.PurchaseDao
-import org.macnigor.spendly.data.ui.income.IncomeActivity
 import org.macnigor.spendly.data.utils.AddIncomeBottomSheet
 import org.macnigor.spendly.data.utils.Utilities
 import java.util.*

@@ -29,6 +29,7 @@
             android:textStyle="bold"/>
     </com.google.android.material.card.MaterialCardView>
 
+
     <!-- Доход и История -->
     <LinearLayout
         android:id="@+id/topButtonsLayout"
@@ -95,6 +96,19 @@
                 app:backgroundTint="#F5DEB3"/>
         </LinearLayout>
     </LinearLayout>
+
+    <!-- Разделительная линия -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/topButtonsLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
     <!-- Прокручиваемая область с расходными кнопками -->
     <androidx.core.widget.NestedScrollView
@@ -269,7 +283,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Развлечения"
+                    android:text="Хобби"
                     android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -304,7 +318,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Квартплата"
+                    android:text="ЖКХ"
                     android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
@@ -339,7 +353,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Автомобиль"
+                    android:text="Авто"
                     android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton

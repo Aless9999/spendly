@@ -64,7 +64,7 @@ class AddIncomeBottomSheet(
 
         }
     }
-    suspend fun addTransaction(amount: Double, category: String) {
+    private suspend fun addTransaction(amount: Double, category: String) {
         val date = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(Date())
         val income = Income(
             amount = amount,
