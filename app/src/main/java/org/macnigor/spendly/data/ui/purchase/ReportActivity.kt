@@ -93,13 +93,34 @@ class ReportActivity : AppCompatActivity() {
             }
 
         val dataSet = PieDataSet(pieEntries, "Расходы по категориям").apply {
-            colors = ColorTemplate.MATERIAL_COLORS.toList()
+            colors = listOf(
+                Color.parseColor("#F44336"), // красный
+
+                 // фиолетовый
+                Color.parseColor("#673AB7"), // глубокий фиолетовый
+
+                Color.parseColor("#2196F3"), // синий
+
+
+
+                Color.parseColor("#4CAF50"), // зелёный
+
+
+                Color.parseColor("#FFEB3B"), // жёлтый
+                Color.parseColor("#FFC107"), // янтарный
+
+                Color.parseColor("#FF5722"), // глубокий оранжевый
+                Color.parseColor("#795548"), // коричневый
+                Color.parseColor("#9E9E9E"), // серый
+                Color.parseColor("#607D8B")  // сине-серый
+            )
+            setDrawValues(false)
             valueTextSize = 14f
             valueTextColor = Color.WHITE
         }
 
         val data = PieData(dataSet).apply {
-            setValueFormatter(PercentFormatter(pieChart))
+           // setValueFormatter(PercentFormatter(pieChart))
         }
 
         pieChart.apply {
@@ -109,12 +130,23 @@ class ReportActivity : AppCompatActivity() {
             setDrawEntryLabels(false)
             setEntryLabelColor(Color.BLACK)
             setEntryLabelTextSize(10f)
-            legend.isWordWrapEnabled = true
-            legend.isEnabled = true
-            legend.textSize = 4f
             animateY(1000)
+
+            legend.apply {
+                isEnabled = true
+                textSize = 12f
+                isWordWrapEnabled = true
+                verticalAlignment = Legend.LegendVerticalAlignment.BOTTOM
+                horizontalAlignment = Legend.LegendHorizontalAlignment.CENTER
+                orientation = Legend.LegendOrientation.HORIZONTAL
+                form = Legend.LegendForm.CIRCLE
+                xEntrySpace = 12f
+                yEntrySpace = 8f
+            }
+
             invalidate()
         }
+
     }
 
 
