@@ -26,14 +26,7 @@
             android:text="Баланс: 12 500 ₽"
             android:textSize="24sp"
             android:gravity="center"
-            android:textStyle="bold"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="18sp"
-            android:autoSizeMaxTextSize="24sp"
-            android:autoSizeStepGranularity="1sp"
-            android:maxLines="1"
-            android:ellipsize="end"
-            android:scrollHorizontally="true" />
+            android:textStyle="bold"/>
     </com.google.android.material.card.MaterialCardView>
 
     <!-- Доход и История -->
@@ -59,24 +52,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Доход"
-                android:textSize="14sp"
-                android:autoSizeTextType="uniform"
-                android:autoSizeMinTextSize="10sp"
-                android:autoSizeMaxTextSize="14sp"
-                android:autoSizeStepGranularity="1sp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:scrollHorizontally="true" />
+                android:textSize="14sp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/incomeButton"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:minWidth="64dp"
+                android:minHeight="64dp"
+                android:padding="0dp"
                 android:text="+"
                 android:textSize="24sp"
                 android:textColor="@android:color/black"
                 app:cornerRadius="32dp"
-                app:backgroundTint="#F5DEB3" />
+                app:backgroundTint="#F5DEB3"/>
         </LinearLayout>
 
         <!-- История -->
@@ -90,24 +79,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="История"
-                android:textSize="14sp"
-                android:autoSizeTextType="uniform"
-                android:autoSizeMinTextSize="10sp"
-                android:autoSizeMaxTextSize="14sp"
-                android:autoSizeStepGranularity="1sp"
-                android:maxLines="1"
-                android:ellipsize="end"
-                android:scrollHorizontally="true" />
+                android:textSize="14sp"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/historyButton"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:minWidth="64dp"
+                android:minHeight="64dp"
+                android:padding="0dp"
                 android:text="⏱"
                 android:textSize="20sp"
                 android:textColor="@android:color/black"
                 app:cornerRadius="32dp"
-                app:backgroundTint="#F5DEB3" />
+                app:backgroundTint="#F5DEB3"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -145,21 +130,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Продукты"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/foodButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
                     android:text="🍎"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
@@ -168,14 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="3 200 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Транспорт -->
@@ -190,21 +165,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Транспорт"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/transportButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
                     android:text="🚌"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
@@ -213,14 +185,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="800 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Аптека -->
@@ -235,21 +200,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Аптека"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/pharmacyButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
                     android:text="💊"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
@@ -258,14 +220,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="450 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Одежда -->
@@ -280,21 +235,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Одежда"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/clothesButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
                     android:text="👕"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
@@ -303,14 +255,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2 100 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Развлечения -->
@@ -325,21 +270,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Развлечения"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/entertainmentButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
                     android:text="🎮"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
@@ -348,14 +290,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1 300 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Квартплата -->
@@ -370,21 +305,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Квартплата"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/rentButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
                     android:text="🏠"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
@@ -393,14 +325,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="6 000 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="12sp" />
             </LinearLayout>
 
             <!-- Автомобиль -->
@@ -415,21 +340,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Автомобиль"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/carButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
                     android:text="🚗"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
@@ -437,18 +359,11 @@
                     android:id="@+id/carAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="4 800 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:text="4 000 ₽"
+                    android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Подарки -->
+            <!-- Телефон -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -459,41 +374,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Подарки"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:text="Телефон"
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/giftsButton"
+                    android:id="@+id/phoneButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:text="🎁"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
+                    android:text="📱"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
                 <TextView
-                    android:id="@+id/giftsAmount"
+                    android:id="@+id/phoneAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="750 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:text="550 ₽"
+                    android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Путешествия -->
+            <!-- Разное -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -504,39 +409,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Путешествия"
-                    android:textSize="14sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="10sp"
-                    android:autoSizeMaxTextSize="14sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:text="Разное"
+                    android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/travelButton"
+                    android:id="@+id/otherButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:text="✈️"
+                    android:minWidth="64dp"
+                    android:minHeight="64dp"
+                    android:padding="0dp"
+                    android:text="❓"
                     android:textColor="@android:color/white"
+                    android:textSize="24sp"
                     app:backgroundTint="#4CAF50"
                     app:cornerRadius="32dp" />
 
                 <TextView
-                    android:id="@+id/travelAmount"
+                    android:id="@+id/otherAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="5 400 ₽"
-                    android:textSize="12sp"
-                    android:autoSizeTextType="uniform"
-                    android:autoSizeMinTextSize="8sp"
-                    android:autoSizeMaxTextSize="12sp"
-                    android:autoSizeStepGranularity="1sp"
-                    android:maxLines="1"
-                    android:ellipsize="end"
-                    android:scrollHorizontally="true" />
+                    android:text="500 ₽"
+                    android:textSize="12sp" />
             </LinearLayout>
+
         </GridLayout>
     </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
