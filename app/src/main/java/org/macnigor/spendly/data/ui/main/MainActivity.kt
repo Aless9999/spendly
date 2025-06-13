@@ -2,8 +2,10 @@ package org.macnigor.spendly.data.ui.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.Dispatchers
@@ -16,64 +18,83 @@ import org.macnigor.spendly.data.database.PurchaseDao
 import org.macnigor.spendly.data.model.Purchase
 import org.macnigor.spendly.data.utils.AddIncomeBottomSheet
 import org.macnigor.spendly.data.utils.Utilities
+import org.macnigor.spendly.data.viewmodel.MainViewModel
+import org.macnigor.spendly.data.viewmodel.MainViewModelFactory
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private lateinit var balanceText: TextView
     private lateinit var purchaseDao: PurchaseDao
     private lateinit var incomeDao: IncomeDao
+    private lateinit var viewModel: MainViewModel
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         balanceText = findViewById(R.id.balanceText)
         purchaseDao = AppDatabase.getDatabase(this).purchaseDao()
         incomeDao = AppDatabase.getDatabase(this).incomeDao()
 
+
+
+
         findViewById<MaterialButton>(R.id.incomeButton).setOnClickListener {
             val bottomSheet = AddIncomeBottomSheet { updateBalance() } // передаём коллбек
             bottomSheet.show(supportFragmentManager, "AddIncomeBottomSheet")
         }
+        val factory = MainViewModelFactory(purchaseDao, incomeDao)
+        viewModel = ViewModelProvider(this, factory)[MainViewModel::class.java]
 
+        viewModel.balance.observe(this) { balance ->
+            balanceText.text = "Баланс: %.2f ₽".format(Locale.US,balance)
+        }
 
-
-        val categoryMap = mapOf(
-            R.id.foodButton to "Продукты",
-            R.id.transportButton to "Транспорт",
-            R.id.pharmacyButton to "Аптека",
-            R.id.clothesButton to "Одежда",
-            R.id.entertainmentButton to "Хобби",
-            R.id.rentButton to "ЖКХ",
-            R.id.otherButton to "Другое"
+        val allCategories = mapOf(
+            "Продукты" to R.id.foodAmount,
+            "Транспорт" to R.id.transportAmount,
+            "Аптека" to R.id.pharmacyAmount,
+            "Одежда" to R.id.clothesAmount,
+            "Хобби" to R.id.entertainmentAmount,
+            "ЖКХ" to R.id.rentAmount,
+            "Другое" to R.id.otherAmount
         )
+        viewModel.categoryTotals.observe(this) { list ->
+            // Превращаем list в карту для быстрого поиска
+            val totalsMap = list.associateBy({ it.category }, { it.total })
 
-
-        lifecycleScope.launch {
-            categoryMap.forEach { (id, category) ->
-                val total = withContext(Dispatchers.IO) {
-                    purchaseDao.getPurchasesByCategory(category).sumOf { it.amount }
-                }
-
-                val textViewId = when (id) {
-                    R.id.foodButton -> R.id.foodAmount
-                    R.id.transportButton -> R.id.transportAmount
-                    R.id.pharmacyButton -> R.id.pharmacyAmount
-                    R.id.clothesButton -> R.id.clothesAmount
-                    R.id.entertainmentButton -> R.id.entertainmentAmount
-                    R.id.rentButton -> R.id.rentAmount
-                    R.id.otherButton -> R.id.otherAmount
-                    else -> null
-                }
-
-                textViewId?.let {
-                    findViewById<TextView>(it).text = "%.0f ₽".format(total)
-                }
+            allCategories.forEach { (category, textViewId) ->
+                val total = totalsMap[category] ?: 0.0
+                findViewById<TextView>(textViewId).text = "%.0f ₽".format(Locale.US, total)
             }
         }
 
 
 
-        updateBalance()
+
+       /* viewModel.categoryTotals.observe(this) { list ->
+            Log.d("MainActivity", "categoryTotals: $list")
+            list.forEach { total ->
+                val textViewId = when (total.category) {
+                    "Продукты" -> R.id.foodAmount
+                    "Транспорт" -> R.id.transportAmount
+                    "Аптека" -> R.id.pharmacyAmount
+                    "Одежда" -> R.id.clothesAmount
+                    "Хобби" -> R.id.entertainmentAmount
+                    "ЖКХ" -> R.id.rentAmount
+                    "Другое" -> R.id.otherAmount
+                    else -> null
+                }
+
+                textViewId?.let {
+                    findViewById<TextView>(it).text = "%.0f ₽".format(Locale.US,total.total)
+                }
+            }
+        }*/
+
     }
 
 
