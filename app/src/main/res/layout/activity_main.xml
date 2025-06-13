@@ -64,7 +64,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/incomeButton"
                 android:layout_width="72dp"
-                android:layout_height="72dp"
+                android:layout_height="84dp"
                 android:text="+"
                 android:textSize="28sp"
                 android:textColor="@android:color/black"
@@ -74,7 +74,7 @@
                 android:elevation="8dp"
                 app:strokeColor="#D2B48C"
                 app:strokeWidth="2dp"
-                android:stateListAnimator="@null"
+
                 />
 
         </LinearLayout>
@@ -95,7 +95,7 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/historyButton"
                 android:layout_width="72dp"
-                android:layout_height="72dp"
+                android:layout_height="84dp"
                 android:text="🕒"
                 android:textSize="28sp"
                 android:textColor="@android:color/black"
@@ -105,7 +105,7 @@
                 android:elevation="8dp"
                 app:strokeColor="#D2B48C"
                 app:strokeWidth="2dp"
-                android:stateListAnimator="@null"
+
                 />
 
         </LinearLayout>
@@ -162,7 +162,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/foodButton"
                     android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_height="84dp"
                     android:minWidth="72dp"
                     android:minHeight="72dp"
                     android:padding="0dp"
@@ -174,7 +174,7 @@
                     android:elevation="8dp"
                     app:strokeColor="#388E3C"
                     app:strokeWidth="2dp"
-                    android:stateListAnimator="@null" />
+                     />
 
                 <TextView
                     android:id="@+id/foodAmount"
@@ -201,7 +201,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/transportButton"
                     android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_height="84dp"
                     android:minWidth="72dp"
                     android:minHeight="72dp"
                     android:padding="0dp"
@@ -213,7 +213,7 @@
                     android:elevation="8dp"
                     app:strokeColor="#388E3C"
                     app:strokeWidth="2dp"
-                    android:stateListAnimator="@null" />
+                     />
 
                 <TextView
                     android:id="@+id/transportAmount"
@@ -240,7 +240,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/pharmacyButton"
                     android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_height="84dp"
                     android:minWidth="72dp"
                     android:minHeight="72dp"
                     android:padding="0dp"
@@ -252,7 +252,7 @@
                     android:elevation="8dp"
                     app:strokeColor="#388E3C"
                     app:strokeWidth="2dp"
-                    android:stateListAnimator="@null" />
+                     />
 
                 <TextView
                     android:id="@+id/pharmacyAmount"
@@ -279,7 +279,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/clothesButton"
                     android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_height="84dp"
                     android:minWidth="72dp"
                     android:minHeight="72dp"
                     android:padding="0dp"
@@ -291,7 +291,7 @@
                     android:elevation="8dp"
                     app:strokeColor="#388E3C"
                     app:strokeWidth="2dp"
-                    android:stateListAnimator="@null" />
+                     />
 
                 <TextView
                     android:id="@+id/clothesAmount"
@@ -318,7 +318,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/entertainmentButton"
                     android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_height="84dp"
                     android:minWidth="72dp"
                     android:minHeight="72dp"
                     android:padding="0dp"
@@ -330,7 +330,7 @@
                     android:elevation="8dp"
                     app:strokeColor="#388E3C"
                     app:strokeWidth="2dp"
-                    android:stateListAnimator="@null" />
+                     />
 
                 <TextView
                     android:id="@+id/entertainmentAmount"
@@ -357,19 +357,17 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/rentButton"
                     android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:minWidth="72dp"
-                    android:minHeight="72dp"
+                    android:layout_height="84dp"
                     android:padding="0dp"
                     android:text="🏠"
                     android:textColor="@android:color/white"
                     android:textSize="32sp"
-                    app:backgroundTint="#4CAF50"
                     app:cornerRadius="36dp"
+                    app:backgroundTint="#4CAF50"
                     android:elevation="8dp"
                     app:strokeColor="#388E3C"
                     app:strokeWidth="2dp"
-                    android:stateListAnimator="@null" />
+                    app:rippleColor="@color/ripple_color" />
 
                 <TextView
                     android:id="@+id/rentAmount"
@@ -396,7 +394,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/otherButton"
                     android:layout_width="72dp"
-                    android:layout_height="72dp"
+                    android:layout_height="84dp"
                     android:minWidth="72dp"
                     android:minHeight="72dp"
                     android:padding="0dp"
@@ -408,7 +406,7 @@
                     android:elevation="8dp"
                     app:strokeColor="#388E3C"
                     app:strokeWidth="2dp"
-                    android:stateListAnimator="@null" />
+                     />
 
                 <TextView
                     android:id="@+id/otherAmount"

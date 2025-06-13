@@ -1,5 +1,6 @@
 package org.macnigor.spendly.data.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import org.macnigor.spendly.data.database.db.AppDatabase
 import org.macnigor.spendly.data.ui.common.AddIncomeBottomSheet
 import org.macnigor.spendly.data.ui.common.AddPurchaseBottomSheet
 import org.macnigor.spendly.data.ui.common.Utilities
+import org.macnigor.spendly.data.ui.purchase.ReportActivity
 import org.macnigor.spendly.data.viewmodel.MainViewModelFactory
 import java.util.*
 
@@ -63,6 +65,12 @@ class MainActivity : AppCompatActivity() {
             bottomSheet.show(supportFragmentManager, "AddIncomeBottomSheet")
         }
 
+        // кнопка история
+        findViewById<MaterialButton>(R.id.historyButton).setOnClickListener {
+            val intent = Intent(this, ReportActivity::class.java)
+            startActivity(intent)
+        }
+
         // Кнопки расходов
         val categories = mapOf(
             "Продукты" to R.id.foodButton,
@@ -74,23 +82,16 @@ class MainActivity : AppCompatActivity() {
             "Другое" to R.id.otherButton
         )
 
-        categories.forEach{(categoryName,id)->
+        categories.forEach { (categoryName, id) ->
             findViewById<MaterialButton>(id).setOnClickListener {
                 val bottomSheet = AddPurchaseBottomSheet.newInstance(categoryName) {
                     viewModel.updateBalance()
                 }
                 bottomSheet.show(supportFragmentManager, "AddPurchaseBottomSheet")
             }
-            }
-        viewModel.updateBalance()
         }
-
-
-
-
-
-
-
+        viewModel.updateBalance()
+    }
 
 
     override fun onResume() {
