@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -29,7 +30,6 @@
             android:textStyle="bold"/>
     </com.google.android.material.card.MaterialCardView>
 
-
     <!-- Доход и История -->
     <LinearLayout
         android:id="@+id/topButtonsLayout"
@@ -47,7 +47,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginEnd="16dp"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            tools:ignore="ExtraText">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -57,16 +58,20 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/incomeButton"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:minWidth="64dp"
-                android:minHeight="64dp"
-                android:padding="0dp"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
                 android:text="+"
-                android:textSize="24sp"
+                android:textSize="28sp"
                 android:textColor="@android:color/black"
-                app:cornerRadius="32dp"
-                app:backgroundTint="#F5DEB3"/>
+                android:padding="0dp"
+                app:cornerRadius="36dp"
+                app:backgroundTint="#F5DEB3"
+                android:elevation="8dp"
+                app:strokeColor="#D2B48C"
+                app:strokeWidth="2dp"
+                android:stateListAnimator="@null"
+                />
+
         </LinearLayout>
 
         <!-- История -->
@@ -84,16 +89,20 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/historyButton"
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                android:minWidth="64dp"
-                android:minHeight="64dp"
-                android:padding="0dp"
-                android:text="⏱"
-                android:textSize="20sp"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:text="🕒"
+                android:textSize="28sp"
                 android:textColor="@android:color/black"
-                app:cornerRadius="32dp"
-                app:backgroundTint="#F5DEB3"/>
+                android:padding="0dp"
+                app:cornerRadius="36dp"
+                app:backgroundTint="#F5DEB3"
+                android:elevation="8dp"
+                app:strokeColor="#D2B48C"
+                app:strokeWidth="2dp"
+                android:stateListAnimator="@null"
+                />
+
         </LinearLayout>
     </LinearLayout>
 
@@ -109,7 +118,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-
     <!-- Прокручиваемая область с расходными кнопками -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollExpenses"
@@ -120,7 +128,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topButtonsLayout"
+        app:layout_constraintTop_toBottomOf="@id/divider"
         app:layout_constraintVertical_bias="0.0">
 
         <GridLayout
@@ -148,16 +156,20 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/foodButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
                     android:padding="0dp"
                     android:text="🍎"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    android:stateListAnimator="@null" />
 
                 <TextView
                     android:id="@+id/foodAmount"
@@ -183,16 +195,20 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/transportButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
                     android:padding="0dp"
                     android:text="🚌"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    android:stateListAnimator="@null" />
 
                 <TextView
                     android:id="@+id/transportAmount"
@@ -218,16 +234,20 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/pharmacyButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
                     android:padding="0dp"
                     android:text="💊"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    android:stateListAnimator="@null" />
 
                 <TextView
                     android:id="@+id/pharmacyAmount"
@@ -253,16 +273,20 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/clothesButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
                     android:padding="0dp"
                     android:text="👕"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    android:stateListAnimator="@null" />
 
                 <TextView
                     android:id="@+id/clothesAmount"
@@ -272,7 +296,7 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Развлечения -->
+            <!-- Хобби -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -288,16 +312,20 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/entertainmentButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
                     android:padding="0dp"
                     android:text="🎮"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    android:stateListAnimator="@null" />
 
                 <TextView
                     android:id="@+id/entertainmentAmount"
@@ -307,7 +335,7 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Квартплата -->
+            <!-- ЖКХ -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -323,26 +351,30 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/rentButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
                     android:padding="0dp"
                     android:text="🏠"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    android:stateListAnimator="@null" />
 
                 <TextView
                     android:id="@+id/rentAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="6 000 ₽"
+                    android:text="5 200 ₽"
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Автомобиль -->
+            <!-- Другое -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -353,97 +385,31 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Авто"
-                    android:textSize="14sp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/carButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
-                    android:padding="0dp"
-                    android:text="🚗"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp"
-                    app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
-
-                <TextView
-                    android:id="@+id/carAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="4 000 ₽"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <!-- Телефон -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Телефон"
-                    android:textSize="14sp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/phoneButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
-                    android:padding="0dp"
-                    android:text="📱"
-                    android:textColor="@android:color/white"
-                    android:textSize="24sp"
-                    app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
-
-                <TextView
-                    android:id="@+id/phoneAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="550 ₽"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <!-- Разное -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Разное"
+                    android:text="Другое"
                     android:textSize="14sp" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/otherButton"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:minWidth="64dp"
-                    android:minHeight="64dp"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
                     android:padding="0dp"
-                    android:text="❓"
+                    android:text="➕"
                     android:textColor="@android:color/white"
-                    android:textSize="24sp"
+                    android:textSize="32sp"
                     app:backgroundTint="#4CAF50"
-                    app:cornerRadius="32dp" />
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    android:stateListAnimator="@null" />
 
                 <TextView
                     android:id="@+id/otherAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="500 ₽"
+                    android:text="0 ₽"
                     android:textSize="12sp" />
             </LinearLayout>
 
