@@ -1,7 +1,7 @@
-package org.macnigor.spendly.data.utils
+package org.macnigor.spendly.data.ui.common
 
-import org.macnigor.spendly.data.database.IncomeDao
-import org.macnigor.spendly.data.database.PurchaseDao
+import org.macnigor.spendly.data.database.dao.IncomeDao
+import org.macnigor.spendly.data.database.dao.PurchaseDao
 
 class Utilities(
     private val purchaseDao: PurchaseDao,

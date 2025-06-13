@@ -1,4 +1,4 @@
-package org.macnigor.spendly.data.database
+package org.macnigor.spendly.data.database.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

@@ -1,9 +1,11 @@
-package org.macnigor.spendly.data.database
+package org.macnigor.spendly.data.database.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import org.macnigor.spendly.data.database.dao.IncomeDao
+import org.macnigor.spendly.data.database.dao.PurchaseDao
 import org.macnigor.spendly.data.model.Income
 import org.macnigor.spendly.data.model.Purchase
 

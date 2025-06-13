@@ -1,4 +1,4 @@
-package org.macnigor.spendly.data.viewmodel
+package org.macnigor.spendly.data.ui.main
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import org.macnigor.spendly.data.database.IncomeDao
-import org.macnigor.spendly.data.database.PurchaseDao
+import org.macnigor.spendly.data.database.dao.IncomeDao
+import org.macnigor.spendly.data.database.dao.PurchaseDao
 import org.macnigor.spendly.data.model.CategoryTotal
-import org.macnigor.spendly.data.utils.Utilities
+import org.macnigor.spendly.data.ui.common.Utilities
 
 class MainViewModel(
     private val purchaseDao: PurchaseDao,

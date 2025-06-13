@@ -1,4 +1,4 @@
-package org.macnigor.spendly.data.database
+package org.macnigor.spendly.data.database.dao
 
 import androidx.room.*
 import org.macnigor.spendly.data.model.Income

@@ -1,4 +1,4 @@
-package org.macnigor.spendly.data.utils
+package org.macnigor.spendly.data.ui.common
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,8 +11,8 @@ import androidx.lifecycle.lifecycleScope
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.coroutines.launch
 import org.macnigor.spendly.R
-import org.macnigor.spendly.data.database.AppDatabase
-import org.macnigor.spendly.data.database.IncomeDao
+import org.macnigor.spendly.data.database.db.AppDatabase
+import org.macnigor.spendly.data.database.dao.IncomeDao
 import org.macnigor.spendly.data.model.Income
 import java.text.SimpleDateFormat
 import java.util.*
