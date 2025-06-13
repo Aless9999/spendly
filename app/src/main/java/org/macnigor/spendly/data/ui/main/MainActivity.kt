@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         lifecycleScope.launch {
             val util = Utilities(purchaseDao, incomeDao)
             val balance = util.updateBalance()
-            balanceText.text = "%.2f ₽".format(Locale.US, balance)
+            balanceText.text = "Баланс: %.2f ₽".format(Locale.US, balance)
         }
     }
 
