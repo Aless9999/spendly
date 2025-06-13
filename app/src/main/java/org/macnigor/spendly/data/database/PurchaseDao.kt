@@ -1,6 +1,8 @@
 package org.macnigor.spendly.data.database
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
+import org.macnigor.spendly.data.model.CategoryTotal
 import org.macnigor.spendly.data.model.Purchase
 
 @Dao
@@ -14,4 +16,8 @@ interface PurchaseDao {
 
     @Query("SELECT * FROM purchases ORDER BY date DESC")
     suspend fun getAllPurchases(): List<Purchase>
+
+    @Query("SELECT category, SUM(amount) as total FROM purchases GROUP BY category")
+    fun getCategoryTotals(): LiveData<List<CategoryTotal>>
+
 }

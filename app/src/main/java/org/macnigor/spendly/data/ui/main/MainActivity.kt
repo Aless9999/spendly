@@ -3,6 +3,7 @@ package org.macnigor.spendly.data.ui.main
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.launch
@@ -33,11 +34,32 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        val categoryMap = mapOf(
+            R.id.foodButton to "Продукты",
+            R.id.transportButton to "Транспорт",
+            R.id.pharmacyButton to "Аптека",
+            R.id.clothesButton to "Одежда",
+            R.id.entertainmentButton to "Хобби",
+            R.id.rentButton to "ЖКХ",
+            R.id.otherButton to "Другое"
+        )
+
+
+        categoryMap.forEach { (id, category) ->
+            findViewById<MaterialButton>(id).setOnClickListener {
+                onCategorySelected(category)
+            }
+
+
+
 
 
 
         updateBalance()
     }
+
+
+}
 
     private fun updateBalance() {
         lifecycleScope.launch {
@@ -51,5 +73,9 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         updateBalance()
+    }
+
+    private fun onCategorySelected(category: String) {
+        Toast.makeText(this, "Выбрана категория: $category", Toast.LENGTH_SHORT).show()
     }
 }
