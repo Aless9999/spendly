@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Основные цвета -->
+    <color name="purple_500">#BB86FC</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC6</color>
+    <color name="teal_700">#03DAC6</color>
+
+    <!-- Базовые цвета -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Цвета темы -->
+    <color name="colorPrimary">@color/purple_500</color>
+    <color name="colorPrimaryVariant">@color/purple_700</color>
+    <color name="colorOnPrimary">@color/black</color>
+
+    <color name="colorSecondary">@color/teal_200</color>
+    <color name="colorSecondaryVariant">@color/teal_700</color>
+    <color name="colorOnSecondary">@color/black</color>
+
+    <color name="colorBackground">#121212</color>
+    <color name="colorOnBackground">@color/white</color>
+
+    <color name="colorSurface">#121212</color>
+    <color name="colorOnSurface">@color/white</color>
+    <color name="ripple_color">#40FFFFFF</color>
+    <color name="textPrimary">#FFFFFF</color> <!-- белый текст -->
+    <color name="backgroundDark">#FFFFFF</color> <!-- Белый -->
+
+
+</resources>

@@ -1,14 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="textPrimary">#FF8F00</color>
-    <color name="backgroundDark">#1E1E1E</color>
-    <color name="yourRippleColor">#40000000</color>
-    <color name="ripple_color">#88FFFFFF</color>
+    <!-- Основные цвета -->
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+
+    <!-- Базовые цвета -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Цвета темы -->
+    <color name="colorPrimary">@color/purple_500</color>
+    <color name="colorPrimaryVariant">@color/purple_700</color>
+    <color name="colorOnPrimary">@color/white</color>
+
+    <color name="colorSecondary">@color/teal_200</color>
+    <color name="colorSecondaryVariant">@color/teal_700</color>
+    <color name="colorOnSecondary">@color/black</color>
+
+    <color name="colorBackground">@color/white</color>
+    <color name="colorOnBackground">@color/black</color>
+
+    <color name="colorSurface">@color/white</color>
+    <color name="colorOnSurface">@color/black</color>
+    <color name="textPrimary">#000000</color> <!-- чёрный текст -->
+    <color name="ripple_color">#20000000</color> <!-- полупрозрачный чёрный -->
+    <color name="backgroundDark">#000000</color> <!-- Чёрный -->
+
 </resources>
+
+
