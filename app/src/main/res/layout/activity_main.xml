@@ -432,6 +432,47 @@
                     android:textSize="12sp"
                     android:textColor="?attr/colorOnSurface"/>
             </LinearLayout>
+            <!-- Косметика -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Косметика"
+                    android:textSize="14sp"
+                    android:textColor="?attr/colorOnSurface"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cosmeticsButton"
+                    android:layout_width="72dp"
+                    android:layout_height="84dp"
+                    android:minWidth="72dp"
+                    android:minHeight="72dp"
+                    android:padding="0dp"
+                    android:text="💄"
+                    android:textColor="@android:color/white"
+                    android:textSize="32sp"
+                    app:backgroundTint="#4CAF50"
+                    app:cornerRadius="36dp"
+                    android:elevation="8dp"
+                    app:strokeColor="#388E3C"
+                    app:strokeWidth="2dp"
+                    />
+
+                <TextView
+                    android:id="@+id/cosmeticsAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 ₽"
+                    android:textSize="12sp"
+                    android:textColor="?attr/colorOnSurface"/>
+            </LinearLayout>
 
         </GridLayout>
     </androidx.core.widget.NestedScrollView>

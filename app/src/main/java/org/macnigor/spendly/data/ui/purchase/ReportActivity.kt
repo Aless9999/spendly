@@ -45,7 +45,7 @@ class ReportActivity : AppCompatActivity() {
             R.array.filter_options,
             R.layout.spinner_item_activity_report,
 
-        )
+            )
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         filterSpinner.adapter = adapter
 
@@ -67,7 +67,6 @@ class ReportActivity : AppCompatActivity() {
         // 🚀 По умолчанию "Сегодня"
         filterSpinner.setSelection(0)
     }
-
 
 
     private fun filterAndShowChart(range: String) {
@@ -96,11 +95,10 @@ class ReportActivity : AppCompatActivity() {
             colors = listOf(
                 Color.parseColor("#F44336"), // красный
 
-                 // фиолетовый
+                // фиолетовый
                 Color.parseColor("#673AB7"), // глубокий фиолетовый
 
                 Color.parseColor("#2196F3"), // синий
-
 
 
                 Color.parseColor("#4CAF50"), // зелёный
@@ -120,7 +118,7 @@ class ReportActivity : AppCompatActivity() {
         }
 
         val data = PieData(dataSet).apply {
-           // setValueFormatter(PercentFormatter(pieChart))
+            // setValueFormatter(PercentFormatter(pieChart))
         }
 
         pieChart.apply {
@@ -131,6 +129,11 @@ class ReportActivity : AppCompatActivity() {
             setEntryLabelColor(Color.BLACK)
             setEntryLabelTextSize(10f)
             animateY(1000)
+
+            // Применяем фон и цвета, в зависимости от ночного режима
+            setBackgroundColor(Color.WHITE)
+            setHoleColor(Color.WHITE)
+            setTransparentCircleColor(Color.WHITE)
 
             legend.apply {
                 isEnabled = true
@@ -208,5 +211,9 @@ class ReportActivity : AppCompatActivity() {
         } catch (e: Exception) {
             0L
         }
+    }
+
+    private fun isNightMode(): Boolean {
+        return (resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES
     }
 }

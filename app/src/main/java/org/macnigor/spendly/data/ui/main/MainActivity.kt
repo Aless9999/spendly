@@ -43,7 +43,9 @@ class MainActivity : AppCompatActivity() {
                 "Одежда" to R.id.clothesAmount,
                 "Хобби" to R.id.entertainmentAmount,
                 "ЖКХ" to R.id.rentAmount,
-                "Другое" to R.id.otherAmount
+                "Другое" to R.id.otherAmount,
+                "Косметика" to R.id.cosmeticsAmount,
+
             )
 
             // Сначала обнуляем всё
@@ -79,7 +81,8 @@ class MainActivity : AppCompatActivity() {
             "Одежда" to R.id.clothesButton,
             "Хобби" to R.id.entertainmentButton,
             "ЖКХ" to R.id.rentButton,
-            "Другое" to R.id.otherButton
+            "Другое" to R.id.otherButton,
+            "Косметика" to R.id.cosmeticsButton
         )
 
         categories.forEach { (categoryName, id) ->
