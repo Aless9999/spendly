@@ -17,12 +17,17 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     private lateinit var viewModel: MainViewModel
     private lateinit var balanceText: TextView
+    private lateinit var incomeButton: MaterialButton
+    private lateinit var historyButton: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         balanceText = findViewById(R.id.balanceText)
+
+        incomeButton = findViewById(R.id.incomeButton)
+        historyButton = findViewById(R.id.historyButton)
 
         val db = AppDatabase.getDatabase(this)
         val factory = MainViewModelFactory(db.purchaseDao(), db.incomeDao())
@@ -60,13 +65,13 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Кнопка дохода
-        findViewById<MaterialButton>(R.id.incomeButton).setOnClickListener {
+        incomeButton.setOnClickListener {
             val bottomSheet = AddIncomeBottomSheet { viewModel.updateBalance() }
             bottomSheet.show(supportFragmentManager, "AddIncomeBottomSheet")
         }
 
         // кнопка история
-        findViewById<MaterialButton>(R.id.historyButton).setOnClickListener {
+        historyButton.setOnClickListener {
             val intent = Intent(this, ReportActivity::class.java)
             startActivity(intent)
         }
@@ -92,26 +97,22 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        viewModel.updateBalance()
-
-        // 🔽 Вызов анимации кнопок при запуске
+        // Запускаем анимации после полной загрузки view
         window.decorView.post {
             animateCategoryButtons()
+            animateTopButtons()
         }
+
+        viewModel.updateBalance()
     }
 
     override fun onResume() {
         super.onResume()
         viewModel.updateBalance()
-
-        // 🔄 Повторная анимация при возвращении на экран
-        animateCategoryButtons()
     }
 
-
-    // 🔧 Анимация всплытия кнопок категорий
     private fun animateCategoryButtons() {
-        val buttonIds = listOf(
+        val expenseButtonIds = listOf(
             R.id.foodButton,
             R.id.transportButton,
             R.id.pharmacyButton,
@@ -122,32 +123,34 @@ class MainActivity : AppCompatActivity() {
             R.id.cosmeticsButton
         )
 
-        buttonIds.forEachIndexed { index, id ->
+        expenseButtonIds.forEachIndexed { index, id ->
             val button = findViewById<MaterialButton>(id)
-
-            // Задаём стартовые параметры
             button.apply {
-                scaleX = 0.8f
-                scaleY = 0.8f
                 alpha = 0f
-                translationY = 50f
+                translationY = 100f
+                animate()
+                    .alpha(1f)
+                    .translationY(0f)
+                    .setStartDelay((index * 50).toLong())
+                    .setDuration(300)
+                    .start()
             }
-
-            // Лог для отладки
-            println("Animating button with id: $id")
-
-            // Запускаем анимацию с задержкой, чтобы был эффект "всплытия" по очереди
-            button.animate()
-                .scaleX(1f)
-                .scaleY(1f)
-                .alpha(1f)
-                .translationY(0f)
-                .setDuration(300)
-                .setStartDelay(index * 80L)
-                .start()
         }
     }
 
-
-
+    private fun animateTopButtons() {
+        val topButtons = listOf(incomeButton, historyButton)
+        topButtons.forEachIndexed { index, button ->
+            button.apply {
+                alpha = 0f
+                translationY = 100f
+                animate()
+                    .alpha(1f)
+                    .translationY(0f)
+                    .setStartDelay((index * 50).toLong())
+                    .setDuration(300)
+                    .start()
+            }
+        }
+    }
 }
