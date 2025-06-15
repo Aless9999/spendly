@@ -67,7 +67,8 @@
                 style="@style/RoundedCircleButton"
                 android:text="+"
                 android:textColor="@android:color/white"
-                app:backgroundTint="#F5DEB3" />
+                app:backgroundTint="#F5DEB3"
+                app:strokeColor="#D2B48C"/>
             />
             />
 
@@ -93,7 +94,8 @@
                 style="@style/RoundedCircleButton"
                 android:text="🕒"
                 android:textColor="@android:color/white"
-                app:backgroundTint="#F5DEB3" />
+                app:backgroundTint="#F5DEB3"
+                app:strokeColor="#D2B48C"/>
             />
 
         </LinearLayout>

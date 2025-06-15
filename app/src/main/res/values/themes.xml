@@ -12,14 +12,14 @@
         <item name="colorOnSecondary">@color/black</item>
 
         <!-- Поверхность и фон -->
-        <item name="colorSurface">@color/white</item>
+        <item name="colorSurface">#F7F8FA</item>
         <item name="colorOnSurface">@color/black</item>
 
         <item name="colorOnBackground">@color/black</item>
 
         <!-- Фон окна и статус-бар -->
 
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">#F7F8FA</item>
 
         <!-- Стиль кнопок (по умолчанию) -->
         <item name="buttonStyle">@style/Widget.MaterialComponents.Button</item>
