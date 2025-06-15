@@ -9,9 +9,12 @@
         <item name="android:textSize">24sp</item>
         <item name="android:elevation">8dp</item>
         <item name="cornerRadius">36dp</item>
-        <item name="rippleColor">#66FFFFFF</item>
-        <item name="strokeColor">#388E3C</item>
+        <item name="rippleColor">#99FFFFFF</item>
+        <item name="strokeColor">#2E7D32</item>
         <item name="strokeWidth">2dp</item>
+        <item name="backgroundTint">#C8E6C9</item> <!-- или #D7F2E3 -->
     </style>
+
+
 
 </resources>
