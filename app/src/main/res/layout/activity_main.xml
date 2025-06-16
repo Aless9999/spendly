@@ -257,6 +257,127 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
+
+
+            <!-- Другое -->
+
+
+            <!-- Косметика -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Косметика"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cosmeticsButton"
+                    style="@style/RoundedCircleButton"
+                    android:text="💄"
+                     />
+
+                <TextView
+                    android:id="@+id/cosmeticsAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 ₽"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Кафе"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cafeButton"
+                    style="@style/RoundedCircleButton"
+                    android:text="☕🍪"
+                    />
+
+                <TextView
+                    android:id="@+id/cafeAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 ₽"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Путешествие"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cruiseButton"
+                    style="@style/RoundedCircleButton"
+                    android:text="✈🌍"
+                    />
+
+                <TextView
+                    android:id="@+id/cruiseAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 ₽"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Автомобиль"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="14sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/carButton"
+                    style="@style/RoundedCircleButton"
+                    android:text="🚗"
+                    />
+
+                <TextView
+                    android:id="@+id/carAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 ₽"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="12sp" />
+            </LinearLayout>
             <!-- Хобби -->
             <LinearLayout
                 android:layout_width="0dp"
@@ -276,7 +397,7 @@
                     android:id="@+id/entertainmentButton"
                     style="@style/RoundedCircleButton"
                     android:text="🎮"
-                     />
+                    />
 
                 <TextView
                     android:id="@+id/entertainmentAmount"
@@ -306,7 +427,7 @@
                     android:id="@+id/rentButton"
                     style="@style/RoundedCircleButton"
                     android:text="🏠"
-                     />
+                    />
 
                 <TextView
                     android:id="@+id/rentAmount"
@@ -317,7 +438,6 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-            <!-- Другое -->
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -336,40 +456,10 @@
                     android:id="@+id/otherButton"
                     style="@style/RoundedCircleButton"
                     android:text="➕"
-                     />
+                    />
 
                 <TextView
                     android:id="@+id/otherAmount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0 ₽"
-                    android:textColor="?attr/colorOnSurface"
-                    android:textSize="12sp" />
-            </LinearLayout>
-
-            <!-- Косметика -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_columnWeight="1"
-                android:gravity="center_horizontal"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Косметика"
-                    android:textColor="?attr/colorOnSurface"
-                    android:textSize="14sp" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/cosmeticsButton"
-                    style="@style/RoundedCircleButton"
-                    android:text="💄"
-                     />
-
-                <TextView
-                    android:id="@+id/cosmeticsAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0 ₽"

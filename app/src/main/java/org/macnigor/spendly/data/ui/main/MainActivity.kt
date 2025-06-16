@@ -45,11 +45,15 @@ class MainActivity : AppCompatActivity() {
                 "Транспорт" to R.id.transportAmount,
                 "Аптека" to R.id.pharmacyAmount,
                 "Одежда" to R.id.clothesAmount,
+                "Косметика" to R.id.cosmeticsAmount,
+                "Кафе" to R.id.cafeAmount,
+                "Путешествие" to R.id.cruiseAmount,
                 "Хобби" to R.id.entertainmentAmount,
                 "ЖКХ" to R.id.rentAmount,
-                "Другое" to R.id.otherAmount,
-                "Косметика" to R.id.cosmeticsAmount,
-            )
+                "Автомобиль" to R.id.carAmount,
+                "Другое" to R.id.otherAmount
+
+                )
 
             // Сначала обнуляем всё
             categories.forEach { (_, viewId) ->
@@ -82,10 +86,13 @@ class MainActivity : AppCompatActivity() {
             "Транспорт" to R.id.transportButton,
             "Аптека" to R.id.pharmacyButton,
             "Одежда" to R.id.clothesButton,
+            "Косметика" to R.id.cosmeticsButton,
+            "Кафе" to R.id.cafeButton,
+            "Путешествие" to R.id.cruiseButton,
             "Хобби" to R.id.entertainmentButton,
             "ЖКХ" to R.id.rentButton,
-            "Другое" to R.id.otherButton,
-            "Косметика" to R.id.cosmeticsButton
+            "Автомобиль" to R.id.carButton,
+            "Другое" to R.id.otherButton
         )
 
         categories.forEach { (categoryName, id) ->
