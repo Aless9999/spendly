@@ -94,23 +94,16 @@ class ReportActivity : AppCompatActivity() {
         val dataSet = PieDataSet(pieEntries, "Расходы по категориям").apply {
             colors = listOf(
                 Color.parseColor("#F44336"), // красный
-
-                // фиолетовый
                 Color.parseColor("#673AB7"), // глубокий фиолетовый
-
                 Color.parseColor("#2196F3"), // синий
-
-
                 Color.parseColor("#4CAF50"), // зелёный
-
-
                 Color.parseColor("#FFEB3B"), // жёлтый
-                Color.parseColor("#FFC107"), // янтарный
-
+                Color.parseColor("#607D8B"), // сине-серый
                 Color.parseColor("#FF5722"), // глубокий оранжевый
                 Color.parseColor("#795548"), // коричневый
                 Color.parseColor("#9E9E9E"), // серый
-                Color.parseColor("#607D8B")  // сине-серый
+                Color.parseColor("#FFC107") // янтарный
+
             )
             setDrawValues(false)
             valueTextSize = 14f
@@ -213,7 +206,4 @@ class ReportActivity : AppCompatActivity() {
         }
     }
 
-    private fun isNightMode(): Boolean {
-        return (resources.configuration.uiMode and android.content.res.Configuration.UI_MODE_NIGHT_MASK) == android.content.res.Configuration.UI_MODE_NIGHT_YES
-    }
 }
